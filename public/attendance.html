@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>drishyanet login</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+    <div class="navbar">
+        <li class="logo"><img src="logo1.png"></li>
+    </div>
+
+    <div class="main">
+        <center>  
+            <div class="d1">
+                <div class="s1">
+                    <h1>Enroll New Student</h1>
+                </div>
+                <div class="search">
+                    <div class="b1"> 
+                      <button class="try" id="submit" onclick="proceedToIndex3()">proceed</button>
+                    </div>
+                  </div>
+            </div>
+            <div class="d3">
+                <div class="s1">
+                    <h1>Take Attendance </h1>
+                </div>
+                <div class="search">
+                    <div class="b1"> 
+                        <button class="try" id="submit" onclick="proceedToIndex4()">proceed</button>
+                    </div>
+                </div>
+            </div>
+        </center>
+    </div>
+    <script>
+        function proceedToIndex3() {
+          fetch('/proceed', {
+            method: 'POST',
+          })
+          .then(response => {
+            if (response.ok)
+            {
+              window.location.href = 'index3.html';
+            } else {
+              console.error('Error during proceed request:', response.statusText);
+              alert('An error occurred during the "proceed" request.');
+            }
+          })
+          .catch(error => {
+            console.error('Error during proceed request:', error);
+            alert('An error occurred during the "proceed" request.');
+          });
+        }
+        function proceedToIndex4() {
+          fetch('/proceed1', {
+            method: 'POST',
+          })
+          .then(response => {
+            if (response.ok)
+            {
+              window.location.href = 'index4.html';
+            }
+            else
+            {
+              console.error('Error during proceed request:', response.statusText);
+              alert('An error occurred during the "proceed1" request.');
+            }
+          })
+          .catch(error => {
+            console.error('Error during proceed1 request:', error);
+            alert('An error occurred during the "proceed1" request.');
+          });
+        }
+      </script>
+</body>
+</html>

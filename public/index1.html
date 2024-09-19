@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>drishyanet login</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+    <div class="navbar">
+        <li class="logo"><img src="logo1.png"></li>
+    </div>
+
+    <div class="main">
+        <center>  
+            <div class="area">    
+                <div class="s1">
+                    <h1>Sign In</h1>
+                </div>
+                <form id="loginForm">
+                    <div class="search">
+                        <input type="text" class="box" id="email" placeholder="Email Address or Phone Number" required>
+                    </div>
+                    <div class="search">
+                        <input type="password" class="box" id="password" placeholder="Password" required>
+                    </div>
+                    <div class="search">
+                        <div class="b1"> 
+                            <button class="try" type="submit">Sign in</button>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="cbox">
+                    <div class="d2">
+                        <a href="#" style="text-decoration: none; color: gray;">need help?</a>
+                    </div>
+                </div>
+                <br><br><br>
+                    
+            </div>
+        </center>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            validateAndRedirect();
+        });
+
+        async function validateAndRedirect() {
+    var email = document.getElementById('email').value;
+    var password = document.getElementById('password').value;
+
+    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailRegex.test(email)) {
+        alert('Please enter a valid email address.');
+        return;
+    }
+
+    if (password.trim() === "") {
+        alert('Please enter a password.');
+        return;
+    }
+
+    try {
+        const response = await fetch('/signin', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ email, password }),
+        });
+
+        if (response.ok)
+        {
+            window.location.replace('attendance.html');
+        }
+        else
+        {
+            alert('Invalid email or password.');
+        }
+    } catch (error) {
+        console.error('Error during form submission:', error);
+        alert('An error occurred during form submission.');
+    }
+}
+
+    </script>
+</body>
+</html>

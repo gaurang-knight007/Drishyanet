@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Video Feed</title>
+    <style>
+        body {
+          margin: 0;
+          padding: 0;
+          height: 100vh;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-image: url('signbg2.jpg');
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
+
+        h1 {
+          text-align: center;
+          color: white;
+        }
+
+        #video-feed {
+          width: 5cm;
+          height: 5cm;
+          border: 2px solid red;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Live Video Feed</h1>
+    <img id="video-feed" src="" alt="Video Feed" />
+    <script>
+        const videoFeed = document.getElementById('video-feed');
+        const ws = new WebSocket('ws://localhost:3000/video-feed');
+
+        ws.onmessage = (event) => {
+            const imageData = JSON.parse(event.data).image;
+            videoFeed.src = 'data:image/jpeg;base64,' + btoa(imageData);
+        };
+    </script>
+</body>
+</html>

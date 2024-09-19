@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+    <link rel="stylesheet" href="style4.css">
+</head>
+<body>
+
+    <div class="navbar">
+        <li class="logo"><img src="logo1.png"></li>
+    </div>
+
+    <div class="main">
+        <center> 
+            <div class="area">    
+                <div class="s1">
+                    <h1>New Entry</h1>
+                </div>
+
+                <form id="registrationForm" enctype="multipart/form-data">
+                    <div class="search">
+                      <label for="name">Name:</label>
+                        <input type="text" class="box" id="name"  placeholder="name" required>
+                    </div>
+                    <div class="search">
+                      <label for="rollNo">Roll No:</label>
+                        <input type="text" class="box" id="rollNo"  placeholder="rollNo" required>
+                    </div>
+                    <div class="search">
+                      <label for="phone">Phone Number:</label>
+                        <input type="text" class="box" id="phone"  placeholder="phone number" required>
+                    </div>
+                    <div class="search">
+                      <label for="image">Upload Image:</label>
+                        <input type="file" class="box" name="image" id="image" accept="image/*" required>
+                    </div>
+
+                    <div class="search">
+                        <div class="b1"> 
+                            <button  type="button" class="try" onclick="submitForm()">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </center>
+    </div>
+
+    <script>
+        function submitForm() {
+            var form = document.getElementById("registrationForm");
+            var formData = new FormData(form);
+            var name = document.getElementById("name").value;
+            var rollNo = document.getElementById("rollNo").value;
+            var phone = document.getElementById("phone").value;
+            formData.append("name", name);
+            formData.append("rollNo", rollNo);
+            formData.append("phone", phone);
+
+            fetch('/api/register', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success)
+                {
+                    alert('User registered successfully!');
+		    window.location.href = '/attendance.html';
+                }
+                else
+                {
+                    alert('An error occurred during registration.');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('An error occurred during registration.');
+            });
+        }
+    </script>
+</body>
+</html>

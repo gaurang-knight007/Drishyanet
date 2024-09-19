@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <div class="container">   
+        <div id="no-background"><img src="logo1.png" width="250px" height="200px"></div>
+        <div class="form-box">
+            <h1 id="title">Sign Up</h1>
+            <form action="/signup" method="post" onsubmit="return validateAndRedirect()">
+                <div class="input-group">
+                    <div class="input-field" id="nameField">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" placeholder="Name" name="name" id="nameInput" required>
+                    </div>
+                    <div class="input-field">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="email" placeholder="Email" name="email" id="emailInput" value="" required>
+                    </div>
+                    <div class="input-field">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" placeholder="Password" name="password" id="passwordInput" required>
+                    </div>
+                    <p id="error-msg" style="color: red;"></p>
+                    <p><font color="white">Forgot password? <a href="#">Click here!</a></font></p>
+                </div>
+                <div class="btn-field">
+                    <button type="submit" id="signupBtn">Sign up</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function validateAndRedirect(){
+            var name = document.getElementById('nameInput').value;
+            var email = document.getElementById('emailInput').value;
+            var password = document.getElementById('passwordInput').value;
+            var errorMsg = document.getElementById('error-msg');
+
+            var nameRegex = /^[a-zA-Z\s]+$/;
+            if (!nameRegex.test(name))
+            {
+                errorMsg.textContent = 'Please enter a valid name.';
+                return false;
+            }
+
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email))
+            {
+                errorMsg.textContent = 'Please enter a valid email address.';
+                return false;
+            }
+
+            if (password.length < 6)
+            {
+                errorMsg.textContent = 'Password must be at least 6 characters long.';
+                return false;
+            }
+            errorMsg.textContent = '';
+            
+            window.location.href = "login1.html?email=";
+            return true;
+        }
+    </script>
+</body>
+</html>

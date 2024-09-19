@@ -1,0 +1,436 @@
+body {
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+  display: flex;
+  font-family: "Roboto", sans-serif;
+  background-color: rgba(8, 8, 8, 0.89);
+}
+
+.random {
+  width: 100%;
+  background-size: cover;
+  overflow-x: hidden;
+  background-position: center;
+  min-height: 2500px;
+  background-color: rgb(3, 3, 56);
+}
+
+.navbar li {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+}
+
+.logo img {
+  width: 100%; /* Make the logo responsive */
+  max-width: 200px; /* Set maximum width for the logo */
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.buttons1,
+.buttons {
+  padding: 7px 17px;
+  color: white;
+  margin: 0 10px;
+  border-radius: 2px;
+  background-color: rgb(33, 2, 99);
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  align-items: center;
+  width: 100%;
+  height: 150px; /* Adjusted height for better responsiveness */
+  justify-content: space-between;
+  background-color: transparent;
+  background-color: #12055100;
+}
+
+.main {
+  width: 100%;
+  margin-top: 1px;
+  background-size: cover;
+  align-items: center;
+  overflow-x: hidden;
+  justify-content: center;
+  display: flex;
+  background-position: center;
+  min-height: 700px;
+  background-image: radial-gradient(rgb(0, 0, 0, 0), rgb(0, 0, 0)), url(homebg.png);
+}
+
+.area {
+  color: white;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 0px;
+}
+
+.area h1 {
+  font-size: 60px;
+  word-spacing: 15px;
+  line-height: 75px;
+}
+
+.area h3 {
+  margin-top: -30px;
+  font-size: 27px;
+  font-weight: normal;
+}
+
+.search {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  min-height: 80px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: left;
+  margin-top: 10px;
+}
+
+.box {
+  width: 30%;
+  min-height: 45px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  color: white;
+}
+
+.b1 {
+  width: 25%;
+  padding-left: 2%;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.try {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(33, 2, 99);
+  min-height: 50px;
+  width: 100%;
+  font-size: 20px;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+.try:hover {
+  background-color: #120551;
+}
+
+
+
+.container1 {
+  width: 100%;
+  min-height: 500px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row; /* Adjusted to have images side by side on larger screens */
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: left;
+  background-image: radial-gradient(rgb(0, 0, 0, 0), rgb(0, 0, 0)), url(avaibg.png);
+}
+
+.container1 img {
+  max-width: 100%; /* Adjusted max-width for responsiveness */
+  height: auto; /* Make images responsive */
+  margin-right: 20px; /* Adjusted margin for better spacing between image and text */
+}
+
+.container1 .image {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  align-self: center;
+  object-fit: contain;
+  margin-top: 20px; /* Adjusted margin for better spacing on small screens */
+}
+
+.text {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Adjusted alignment for better positioning of text */
+  justify-content: flex-start; /* Adjusted alignment for better positioning of text */
+  text-align: left; /* Adjusted text alignment for better readability */
+  margin-top: 20px;
+}
+
+.container3 {
+  width: 100%;
+  min-height: 600px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row; /* Adjusted to have images side by side on larger screens */
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: left;
+  background-image: radial-gradient(rgb(0, 0, 0, 0), rgb(0, 0, 0)), url(attenbg.png);
+}
+
+.container3 img {
+  max-width: 100%; /* Adjusted max-width for responsiveness */
+  height: auto; /* Make images responsive */
+  margin-right: 20px; /* Adjusted margin for better spacing between image and text */
+}
+
+.container3 .image {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  align-self: center;
+  object-fit: contain;
+  margin-top: 20px; /* Adjusted margin for better spacing on small screens */
+}
+
+
+
+.text {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.text p {
+  font-size: 1.5rem;
+  margin-top: 5px;
+}
+
+.text h1 {
+  font-size: 3.125rem;
+}
+
+.question {
+  width: 100%;
+  min-height: 600px;
+  background-color: #000;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-image: radial-gradient(rgb(0, 0, 0, 0), rgb(0, 0, 0)), url(quesbg.png);
+}
+
+.question h1 {
+  text-align: center;
+  color: white;
+  margin-bottom: 50px;
+  font-size: 40px;
+}
+
+.quest {
+  width: 80%; /* Adjusted width for better responsiveness */
+  height: 75px;
+  background-color: rgb(5, 6, 73);
+  color: white;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  text-align: center;
+  flex-direction: row;
+  border-radius: 50%;
+  margin: 10px 0; /* Adjusted margin for better spacing on small screens */
+}
+
+.quest .textbox {
+  display: flex;
+  text-align: left;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  align-self: center;
+  font-size: 18px; /* Adjusted font size for better readability on small screens */
+  margin: 0 20px; /* Adjusted margin for better spacing on small screens */
+  word-spacing: 5px;
+  text-align: left;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 500px;
+  background-color: black;
+  margin-top: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  background-image: radial-gradient(rgb(0, 0, 0, 0), rgb(0, 0, 0)), url(contactbg.png);
+}
+
+.footercon {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 50px;
+  background-color: transparent;
+}
+
+.footer .flex1 {
+  color: #999;
+  justify-content: space-around;
+  align-items: flex-start;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  font-size: 17px;
+  min-height: 30px;
+}
+
+.footer .flex1 h5 {
+  align-self: flex-start;
+}
+
+.list1 {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-items: flex-start;
+  align-self: center;
+  justify-content: center;
+  min-height: 50px;
+  font-size: 13px;
+  padding: 0px 20px; /* Adjusted padding for better spacing on small screens */
+  text-align: left;
+}
+
+.list1 li {
+  font-size: 13px;
+  margin: 7px 0; /* Adjusted margin for better spacing on small screens */
+  list-style-type: none;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-items: center;
+  align-self: flex-start;
+  justify-content: center;
+}
+
+.list1 li a {
+  color: #999;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.end {
+  width: 100%;
+  min-height: 50px;
+  justify-content: space-around;
+  align-items: flex-start;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  color: white;
+  margin-top: -60px;
+}
+
+.end h2 {
+  display: flex;
+  flex-direction: row;
+  font-size: 16px;
+}
+
+/* Media Queries for responsiveness */
+
+@media only screen and (max-width: 768px) {
+  .navbar {
+    height: 150px; /* Adjusted height for small screens */
+  }
+
+  .logo img {
+    max-width: 150px; /* Adjusted maximum width for small screens */
+  }
+
+  .buttons1,
+  .buttons {
+    padding: 7px 12px; /* Adjusted padding for better spacing on small screens */
+    font-size: 14px; /* Adjusted font size for better readability on small screens */
+  }
+
+  .search {
+    width: 100%; /* Adjusted width for small screens */
+  }
+
+  .box {
+    width: 100%; /* Adjusted width for small screens */
+  }
+
+  .b1 {
+    padding-left: 2%;
+    text-wrap: nowrap;
+    width: 100%;
+    min-height: 50px;
+    border-radius: 5px;
+  }
+
+  .try {
+    font-size: 18px; /* Adjusted font size for better readability on small screens */
+  }
+
+  .container1,
+  .container3 {
+    flex-direction: column; /* Stack items on small screens */
+  }
+
+  .container1 img,
+  .container3 img {
+    height: auto; /* Make images responsive */
+  }
+
+  .text h1 {
+    font-size: 2.5rem; /* Adjusted font size for better readability on small screens */
+  }
+
+  .quest {
+    width: 90%; /* Adjusted width for better spacing on small screens */
+  }
+
+  .quest .textbox {
+    font-size: 16px; /* Adjusted font size for better readability on small screens */
+    margin: 0 10px; /* Adjusted margin for better spacing on small screens */
+  }
+
+  .list1 {
+    padding: 0px 10px; /* Adjusted padding for better spacing on small screens */
+  }
+
+  .end {
+    margin-top: -30px; /* Adjusted margin for better spacing on small screens */
+  }
+}
+

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>drishyanet</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="random">
+        <div class="navbar">
+            <li class="logo"><img src="logo1.png" alt=" "></li>
+            <li class="buttons"><a href="index1.html" style="text-decoration: none; color: white;"><strong>Sign In</strong></a>     
+        </div>
+        <div id="main" class="main">
+            <div class="area">
+                <h1 style="text-decoration: none; color: silver;"> Attendance Management & Security
+                </h1>
+                <br>
+                <h3 style="text-decoration: none; color: silver;">
+                  detect anywhere in real time.
+                </h3>
+                <div class="search">
+                  <input type="text" class="box" id="emailInput" placeholder="Email Address" required> 
+                  <div class="b1"> 
+                    <button class="try" onclick="redirectToSignUp()">Get started</button>
+                  </div>    
+                </div>  
+                <h4 style="text-decoration: none; color: silver;"> Be smart be future ready. Join us  </h4>
+            </div>
+        </div>
+        <div id="container1" class="container1">
+            <div class="image">
+              <img src="future.png">
+            </div>
+              <div class="text">
+                <h1>Use on your phone's or cctv camera</h1>
+                  <p>
+                      Available on Google play store and also as website<br>
+                      use anywhere anytime, explore more 
+                  </p>
+              </div>
+          </div>
+        <div id="container3" class="container3">    
+          <div class="text">
+              <h1>Smart Attendance System</h1>
+                <p>
+                  Use facial recognition technique <br>
+                  to automate task like attendance <br>
+                  in school, colleges and firms .
+                </p>
+          </div>
+          <div class="image"><img src="face.png"></div>
+        </div>
+        <div id="question" class="question">
+          <h1>FAQs</h1>
+              <div class="quest">
+                  <div class="textbox">
+                    <a href="" style="text-decoration: none; color: white;">What is object detection</a>
+                  </div>
+              </div>
+              <div class="quest">
+                <div class="textbox">
+                  <a href="" style="text-decoration: none; color: white;">How much does Drishyanet cost?</a>
+                </div>
+              </div>    
+              <div class="quest">
+                <div class="textbox">
+                  <a href="" style="text-decoration: none; color: white;">What can I do?</a>
+                </div>
+              </div>
+              <div class="quest">
+                <div class="textbox">
+                  <a href="" style="text-decoration: none; color: white;">What can I search?</a>
+                </div>
+              </div>
+        </div>
+        <div class="footer">
+          <div class="footercon">
+            <div class="flex1">
+              <h5>Questions? Call 8423867123</h5>
+            </div>               
+              <ul class="list1">    
+                <li><a href="">FAQ</a></li>
+                <li><a href="">Investor Relation</a></li>
+                <li><a href="">Ways to survillance</a></li>
+                <li><a href="">Corporate Information</a></li>
+                <li><a href="">premium</a></li>
+              </ul>
+              <ul class="list1">
+                <li><a href="">Home</a></li>
+                <li><a href="">Jobs</a></li>
+                <li><a href="">Terms of Use</a></li>
+                <li><a href="">Contact Us</a></li>
+                <li><a href="">#</a></li>
+              </ul>
+              <ul class="list1">
+                <li><a href="">Account</a></li>
+                <li><a href="">Redeem Gift Cards</a></li>
+                <li><a href="">Privacy</a></li>
+                <li><a href="">Speed Test</a></li>
+                <li><a href="">#</a></li>
+              </ul>
+              <ul class="list1">
+                <li><a href="">Media Center<</a></li>
+                  <li><a href="">Buy Gift Cards</a></li>
+                  <li><a href="">Cookie Preferences</a></li>
+                  <li><a href="">Legal Notices</a></li>
+                  <li><a href="">#</a></li>
+              </ul>                       
+          </div>
+          <div class="end">
+            <h2>GAURANG GAUTAM</h2>
+          </div>
+        </div>
+    </div>
+    <script>
+      function isValidEmail(email) {
+          var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          return emailRegex.test(email);
+      }
+      function redirectToSignUp() {
+          var emailInputValue = document.getElementById("emailInput").value;
+      
+          if (isValidEmail(emailInputValue)) {
+              window.location.href = "login1.html?email=" + encodeURIComponent(emailInputValue);
+          } else {
+              alert("Please enter a valid email address");
+          }
+      }
+    </script>
+</body>
+</html>
