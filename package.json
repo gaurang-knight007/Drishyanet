@@ -1,0 +1,23 @@
+{
+  "name": "att",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2",
+    "http": "^0.0.1-security",
+    "mongodb": "^6.3.0",
+    "mongoose": "^8.0.4",
+    "multer": "^1.4.5-lts.1",
+    "path": "^0.12.7",
+    "ws": "^8.16.0"
+  },
+  "description": ""
+}

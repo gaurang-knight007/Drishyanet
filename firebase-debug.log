@@ -1,0 +1,44 @@
+[debug] [2024-01-19T09:34:10.243Z] ----------------------------------------------------------------------
+[debug] [2024-01-19T09:34:10.246Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\gaura\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js projects:create Drishya27101409
+[debug] [2024-01-19T09:34:10.246Z] CLI Version:   13.0.3
+[debug] [2024-01-19T09:34:10.246Z] Platform:      win32
+[debug] [2024-01-19T09:34:10.246Z] Node Version:  v21.5.0
+[debug] [2024-01-19T09:34:10.247Z] Time:          Fri Jan 19 2024 15:04:10 GMT+0530 (India Standard Time)
+[debug] [2024-01-19T09:34:10.247Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-01-19T09:34:10.253Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-01-19T09:34:10.253Z] > authorizing via signed-in user (2k22.csai.2211365@gmail.com)
+[debug] [2024-01-19T09:34:25.671Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[debug] [2024-01-19T09:34:25.671Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"Drishya27101409","name":"Drishya27101409"}
+[debug] [2024-01-19T09:34:27.354Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 400
+[debug] [2024-01-19T09:34:27.355Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"error":{"code":400,"message":"field [project_id] has issue [project_id contains invalid characters]","status":"INVALID_ARGUMENT","details":[{"@type":"type.googleapis.com/google.rpc.BadRequest","fieldViolations":[{"field":"project_id","description":"project_id contains invalid characters"}]},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"url":"https://cloud.google.com/resource-manager/reference/rest/v1/projects"}]}]}}
+[debug] [2024-01-19T09:34:27.579Z] FirebaseError: HTTP Error: 400, field [project_id] has issue [project_id contains invalid characters]
+    at responseToError (C:\Users\gaura\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:49:12)
+    at RetryOperation._fn (C:\Users\gaura\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:292:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to create project. See firebase-debug.log for more info.
+[debug] [2024-01-19T09:35:16.277Z] ----------------------------------------------------------------------
+[debug] [2024-01-19T09:35:16.280Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\gaura\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js projects:create drishya-27101409
+[debug] [2024-01-19T09:35:16.280Z] CLI Version:   13.0.3
+[debug] [2024-01-19T09:35:16.280Z] Platform:      win32
+[debug] [2024-01-19T09:35:16.281Z] Node Version:  v21.5.0
+[debug] [2024-01-19T09:35:16.281Z] Time:          Fri Jan 19 2024 15:05:16 GMT+0530 (India Standard Time)
+[debug] [2024-01-19T09:35:16.281Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-01-19T09:35:16.287Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-01-19T09:35:16.288Z] > authorizing via signed-in user (2k22.csai.2211365@gmail.com)
+[debug] [2024-01-19T09:35:18.781Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[debug] [2024-01-19T09:35:18.781Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"drishya-27101409","name":"drishya-27101409"}
+[debug] [2024-01-19T09:35:21.112Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 200
+[debug] [2024-01-19T09:35:21.112Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"name":"operations/cp.6521960439196346229"}
+[debug] [2024-01-19T09:35:21.113Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.6521960439196346229 [none]
+[debug] [2024-01-19T09:35:22.782Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.6521960439196346229 200
+[debug] [2024-01-19T09:35:22.782Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.6521960439196346229 {"name":"operations/cp.6521960439196346229","metadata":{"@type":"type.googleapis.com/google.cloudresourcemanager.v1.ProjectCreationStatus","ready":true},"done":true,"error":{"code":9,"message":"Callers must accept Terms of Service","details":[{"@type":"type.googleapis.com/google.rpc.PreconditionFailure","violations":[{"type":"TOS","subject":"cloud","description":"Callers must accept Terms of Service"}]}]}}
+[debug] [2024-01-19T09:35:22.996Z] FirebaseError: Callers must accept Terms of Service
+    at OperationPoller.poll (C:\Users\gaura\AppData\Roaming\npm\node_modules\firebase-tools\lib\operation-poller.js:24:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async createCloudProject (C:\Users\gaura\AppData\Roaming\npm\node_modules\firebase-tools\lib\management\projects.js:186:29)
+    at async createFirebaseProjectAndLog (C:\Users\gaura\AppData\Roaming\npm\node_modules\firebase-tools\lib\management\projects.js:45:9)
+[error] 
+[error] Error: Failed to create project. See firebase-debug.log for more info.
